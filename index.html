@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FounderPath — Where Founders Are Forged</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ LANDING PAGE ═══════════════════ -->
+  <div id="landing-page">
+    <canvas id="particle-canvas"></canvas>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-up delay-1">The Founder's Journey Awaits</div>
+        <h1 class="hero-title animate-up delay-2">FounderPath</h1>
+        <p class="hero-sub animate-up delay-3">
+          You have 25 decisions. Each one changes everything.<br>
+          Your journey from dreamer to founder starts now.
+        </p>
+        <button class="btn-primary animate-up delay-4" onclick="handleStartFounding()">Start Founding</button>
+        <div class="scroll-arrow animate-up delay-5"><span class="bounce">↓</span></div>
+      </div>
+    </section>
+
+    <!-- ── STATS BELT ── -->
+    <section class="stats-belt reveal">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <div class="stat-num" data-target="25">0</div>
+          <div class="stat-label">Skills to Master</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="6">0</div>
+          <div class="stat-label">Stages of the Journey</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">AI-Powered Tools</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="100">0</div>
+          <div class="stat-label">% Free to Play</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THE 6 STAGES ── -->
+    <section class="stages-section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">The Architecture of a Founder</div>
+        <h2 class="section-title">Six Stages. Zero Shortcuts.</h2>
+        <p class="section-sub">The path from idea to empire has always been the same.
+        Few survive it. Those who do change the world.</p>
+      </div>
+      <div class="stages-track">
+        <div class="stage-card reveal reveal-delay-1" style="--stage-color:#c084fc;">
+          <div class="stage-num">01</div>
+          <div class="stage-name">Ideation</div>
+          <div class="stage-count">5 Skills</div>
+          <p class="stage-desc">Find the problem worth solving. Understand the market. Forge your mission before the world tries to reshape it.</p>
+          <div class="stage-bar" style="background:rgba(192,132,252,0.3);"></div>
+        </div>
+        <div class="stage-card reveal reveal-delay-2" style="--stage-color:#60a5fa;">
+          <div class="stage-num">02</div>
+          <div class="stage-name">Building</div>
+          <div class="stage-count">5 Skills</div>
+          <p class="stage-desc">Co-founders, MVPs, code, legal. The unglamorous work that separates dreamers from builders.</p>
+          <div class="stage-bar" style="background:rgba(96,165,250,0.3);"></div>
+        </div>
+        <div class="stage-card reveal reveal-delay-3" style="--stage-color:#34d399;">
+          <div class="stage-num">03</div>
+          <div class="stage-name">Launch</div>
+          <div class="stage-count">5 Skills</div>
+          <p class="stage-desc">Go to market. Face the brutality of public judgment. Iterate before the runway disappears beneath you.</p>
+          <div class="stage-bar" style="background:rgba(52,211,153,0.3);"></div>
+        </div>
+        <div class="stage-card reveal reveal-delay-1" style="--stage-color:#fbbf24;">
+          <div class="stage-num">04</div>
+          <div class="stage-name">Growth</div>
+          <div class="stage-count">5 Skills</div>
+          <p class="stage-desc">Marketing, partnerships, funding rounds. Turn early traction into a machine that compounds.</p>
+          <div class="stage-bar" style="background:rgba(251,191,36,0.3);"></div>
+        </div>
+        <div class="stage-card reveal reveal-delay-2" style="--stage-color:#d4af37;">
+          <div class="stage-num">05</div>
+          <div class="stage-name">Scale</div>
+          <div class="stage-count">5 Skills</div>
+          <p class="stage-desc">Hire. Expand. Protect. Build the systems that survive beyond your personal effort.</p>
+          <div class="stage-bar" style="background:rgba(212,175,55,0.3);"></div>
+        </div>
+        <div class="stage-card reveal reveal-delay-3" style="--stage-color:#f87171;">
+          <div class="stage-num">06</div>
+          <div class="stage-name">Legacy</div>
+          <div class="stage-count">The Final Question</div>
+          <p class="stage-desc">What will remain when you're gone? The answer defines whether you built a company — or a movement.</p>
+          <div class="stage-bar" style="background:rgba(248,113,113,0.3);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILL PREVIEW STRIP ── -->
+    <section class="skills-preview-section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">A Taste of What Awaits</div>
+        <h2 class="section-title">The 25 Skills. Each One a Story.</h2>
+        <p class="section-sub">Every skill is a scene. Every scene has a lesson. Every lesson earns you the right to continue.</p>
+      </div>
+      <div class="skills-marquee-wrapper">
+        <div class="skills-marquee">
+          <div class="marquee-track">
+            <span class="marquee-skill">The Visionary's Spark</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Customer's Confession</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Competitor's Shadow</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Market Map</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Mission Forge</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Founder's Dilemma</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The MVP Sacrifice</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Pricing Crossroads</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Legal Labyrinth</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Patent Wall</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Brand's Voice</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Marketing Leap</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The First Hundred</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Pitch Gauntlet</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Feedback Loop</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Hiring Hunt</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Investor's Table</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Expansion Gamble</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Partnership Web</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Numbers Game</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Border Crossing</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Acquisition Offer</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Crisis Hour</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Sustainability Pledge</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Exit Door</span><span class="marquee-dot">✦</span>
+            <!-- duplicate for loop -->
+            <span class="marquee-skill">The Visionary's Spark</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Customer's Confession</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Competitor's Shadow</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Market Map</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Mission Forge</span><span class="marquee-dot">✦</span>
+            <span class="marquee-skill">The Founder's Dilemma</span><span class="marquee-dot">✦</span>
+          </div>
+        </div>
+      </div>
+      <div class="preview-cards-large">
+        <div class="plarge-card reveal reveal-delay-1">
+          <div class="plarge-num">Skill 01</div>
+          <h3 class="plarge-title">The Visionary's Spark</h3>
+          <p class="plarge-stage">Ideation</p>
+          <p class="plarge-desc">Three problems are placed in front of you. "Choose the one that makes you angry," comes the instruction. Your answer reveals everything about whether you're driven by mission or by money.</p>
+          <div class="plarge-questions">5 questions · Story-driven · Open reflection</div>
+        </div>
+        <div class="plarge-card featured reveal reveal-delay-2">
+          <div class="plarge-badge">Most Challenging</div>
+          <div class="plarge-num">Skill 14</div>
+          <h3 class="plarge-title">The Pitch Gauntlet</h3>
+          <p class="plarge-stage">Launch</p>
+          <p class="plarge-desc">"I have 3 minutes," the investor says. "Convince me your startup deserves to exist." Every second counts. Every word is a test. This is not a pitch. It is a reckoning.</p>
+          <div class="plarge-questions">5 questions · High stakes · No mercy</div>
+        </div>
+        <div class="plarge-card reveal reveal-delay-3">
+          <div class="plarge-num">Skill 25</div>
+          <h3 class="plarge-title">The Exit Door</h3>
+          <p class="plarge-stage">Scale</p>
+          <p class="plarge-desc">After everything — the failures, the pivots, the wins — one final question is asked. The answer will define not just your company, but who you became building it.</p>
+          <div class="plarge-questions">5 questions · The finale · Personal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ── -->
+    <section class="how-section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">The Format</div>
+        <h2 class="section-title">How FounderPath Works</h2>
+      </div>
+      <div class="how-steps">
+        <div class="how-step reveal reveal-delay-1">
+          <div class="how-step-num">I</div>
+          <h3 class="how-step-title">Name Your Venture</h3>
+          <p class="how-step-desc">Before you enter, you tell us what you're building. Your answers shape every scenario, every feedback loop, every AI simulation that follows.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-2">
+          <div class="how-step-num">II</div>
+          <h3 class="how-step-title">Enter the Story</h3>
+          <p class="how-step-desc">Each skill is a cinematic chapter. You read. You choose. You get feedback. Your decisions are remembered. Progress saves automatically to your device.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-3">
+          <div class="how-step-num">III</div>
+          <h3 class="how-step-title">Use the AI Tools</h3>
+          <p class="how-step-desc">Between chapters, use The Negotiator, Pitch Coach, or Market Pulse — Gemini-powered simulations that stress-test your real startup thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AI TOOLS PREVIEW ── -->
+    <section class="ai-preview-section">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Built-In Simulations</div>
+        <h2 class="section-title">Your AI-Powered Founder's Toolkit</h2>
+        <p class="section-sub">Three tools. Each one designed to expose what you don't yet know about building a company.</p>
+      </div>
+      <div class="ai-preview-grid">
+        <div class="ai-prev-card reveal reveal-delay-1">
+          <div class="ai-prev-icon">🤝</div>
+          <h3 class="ai-prev-title">The Negotiator</h3>
+          <p class="ai-prev-desc">Face down an investor, a corporate partner, or a stubborn supplier. Every word is studied. Every hesitation noted. Practice until you never flinch.</p>
+          <ul class="ai-prev-list">
+            <li>Investor meetings</li>
+            <li>Partnership deals</li>
+            <li>Supplier negotiations</li>
+          </ul>
+        </div>
+        <div class="ai-prev-card featured-tool reveal reveal-delay-2">
+          <div class="ai-prev-icon">🎤</div>
+          <h3 class="ai-prev-title">The Pitch Coach</h3>
+          <p class="ai-prev-desc">Write your pitch. Get a score out of 10 on clarity, persuasion, and impact. Blunt, specific feedback on exactly what's broken so you can fix it.</p>
+          <ul class="ai-prev-list">
+            <li>Clarity: X/10</li>
+            <li>Persuasion: X/10</li>
+            <li>Impact: X/10</li>
+          </ul>
+        </div>
+        <div class="ai-prev-card reveal reveal-delay-3">
+          <div class="ai-prev-icon">📈</div>
+          <h3 class="ai-prev-title">Market Pulse</h3>
+          <p class="ai-prev-desc">Run four simulated quarters. Make decisions. Watch the consequences ripple across capital, customers, and runway. Failure here is free. In the real world, it isn't.</p>
+          <ul class="ai-prev-list">
+            <li>4-quarter simulation</li>
+            <li>Dynamic market events</li>
+            <li>Real consequences</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MANIFESTO ── -->
+    <section class="manifesto-section">
+      <div class="manifesto-inner reveal">
+        <div class="manifesto-eyebrow">The Truth About Building</div>
+        <h2 class="manifesto-title">This is not a course.<br>This is a reckoning.</h2>
+        <div class="manifesto-lines">
+          <p class="manifesto-line">No slide decks. No participation certificates. No polite feedback.</p>
+          <p class="manifesto-line">Just you, 25 decisions, and a path that reveals<br>what happens when founders get them wrong.</p>
+          <p class="manifesto-line">The story adapts to your venture.<br>The AI responds to your thinking.<br>The journal captures who you're becoming.</p>
+          <p class="manifesto-line" style="color:var(--gold);font-style:italic;">"Are you ready to find out what kind of founder you are?"</p>
+        </div>
+        <button class="btn-primary btn-manifesto" onclick="handleStartFounding()">I'm Ready. Start Founding.</button>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ── -->
+    <section class="cta-section">
+      <div class="cta-inner reveal">
+        <p class="cta-eyebrow">Free. No sign-up. No paywall.</p>
+        <h2 class="cta-headline">Your venture is waiting.</h2>
+        <p class="cta-text">Progress saves automatically to your browser. Pick up where you left off. Any device. Any time.</p>
+        <button class="btn-primary" onclick="handleStartFounding()">Start Founding</button>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="landing-footer">
+      <div class="footer-inner">
+        <div class="footer-logo">FounderPath</div>
+        <p class="footer-tagline">Where founders are forged.</p>
+        <div class="footer-links">
+          <span onclick="handleStartFounding()" style="cursor:pointer;">Begin the Journey</span>
+          <span class="footer-sep">·</span>
+          <span>25 Skills</span>
+          <span class="footer-sep">·</span>
+          <span>3 AI Tools</span>
+        </div>
+        <p class="footer-copy">© 2026 FounderPath. Built by Shahan Khan.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════ FORM GATE MODAL ═══════════════════ -->
+  <div id="form-gate-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="grain"></div>
+      <div class="modal-eyebrow">One Quick Step</div>
+      <h2 class="modal-title">Before you begin</h2>
+      <div class="modal-divider"></div>
+      <p style="color:var(--white-dim);line-height:1.9;margin-bottom:32px;font-size:0.95rem;">
+        Please fill out a quick form so we can understand who's using FounderPath. It takes under 2 minutes — and you'll only ever see it once.
+      </p>
+      <button class="btn-primary" id="open-form-btn" onclick="openFormInNewTab()" style="width:100%;margin-bottom:14px;">
+        Open the Form ↗
+      </button>
+      <button class="btn-secondary" id="form-done-btn" onclick="continueAfterForm()" style="width:100%;display:none;text-align:center;">
+        I've submitted the form — Continue →
+      </button>
+      <a class="link-subtle" href="#" onclick="skipFormGate(event)">Skip for now</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ VENTURE CREATION MODAL ═══════════════════ -->
+  <div id="venture-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="grain"></div>
+      <div class="modal-eyebrow">Before you begin...</div>
+      <h2 class="modal-title">Tell us about your dream.</h2>
+      <div class="modal-divider"></div>
+      <div class="form-group">
+        <label class="form-label">What is the name of your startup?</label>
+        <input id="venture-name" class="form-input" type="text" maxlength="50" placeholder="e.g., HelioFlux, RoboRumble, Project Siha" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Describe your venture in one sentence.</label>
+        <textarea id="venture-desc" class="form-textarea" maxlength="200" rows="3" placeholder="e.g., We harvest energy from roads to power streetlights."></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitVenture()">Begin the Founder's Path</button>
+      <a class="link-subtle" href="#" onclick="skipVenture(event)">I'll decide later</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ HEADQUARTERS ═══════════════════ -->
+  <div id="headquarters" class="hidden">
+    <nav class="hq-nav">
+      <div class="nav-logo">FounderPath</div>
+      <div class="nav-venture" id="nav-venture-name" onclick="openEditVentureModal()">Unnamed Venture ✏️</div>
+      <div class="nav-actions">
+        <button class="nav-btn" onclick="openJournal()" title="Journal">📖 Journal</button>
+        <button class="nav-btn danger" onclick="confirmReset()" title="Reset">↺ Reset</button>
+      </div>
+    </nav>
+    <main class="hq-main">
+      <div class="hq-greeting">
+        <h2 id="hq-greeting-text">Hello, Founder.</h2>
+        <p id="hq-greeting-desc" class="hq-venture-desc"></p>
+      </div>
+      <div class="progress-container">
+        <div class="progress-label">
+          <span id="progress-text">0/25 Skills Completed</span>
+          <span id="progress-pct">0%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+      </div>
+      <section class="skills-section">
+        <h3 class="section-heading">The Founder's Path — 25 Skills to Master</h3>
+        <p class="section-subheading">Each skill is a story. Complete them all to become a Master Founder.</p>
+        <div class="skills-grid" id="skills-grid"></div>
+      </section>
+      <section class="ai-section">
+        <h3 class="section-heading">Your Founder's Toolkit</h3>
+        <p class="section-subheading">AI-powered simulations to sharpen your real-world skills.</p>
+        <div class="ai-tools-grid">
+          <div class="ai-card" onclick="openAITool('negotiator')">
+            <div class="ai-icon">🤝</div>
+            <h4 class="ai-title">The Negotiator</h4>
+            <p class="ai-desc">Simulate high-stakes conversations with investors, partners, and suppliers. Practice your deal-making in a safe environment.</p>
+            <button class="btn-secondary">Enter the Chamber</button>
+          </div>
+          <div class="ai-card" onclick="openAITool('pitch')">
+            <div class="ai-icon">🎤</div>
+            <h4 class="ai-title">The Pitch Coach</h4>
+            <p class="ai-desc">Write your elevator pitch. Get instant AI feedback on clarity, persuasion, and impact. Refine until it's fundable.</p>
+            <button class="btn-secondary">Refine Your Pitch</button>
+          </div>
+          <div class="ai-card" onclick="openAITool('market')">
+            <div class="ai-icon">📈</div>
+            <h4 class="ai-title">Market Pulse</h4>
+            <p class="ai-desc">Run your business through simulated market quarters. Make strategic decisions and see their real consequences.</p>
+            <button class="btn-secondary">Simulate the Market</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ═══════════════════ STORY ENGINE MODAL ═══════════════════ -->
+  <div id="story-modal" class="modal-overlay hidden story-modal-overlay">
+    <div class="story-modal-box">
+      <div class="grain"></div>
+      <button class="story-close" onclick="closeStoryModal()">✕</button>
+      <div class="story-header">
+        <div class="story-skill-num" id="story-skill-num">SKILL 01</div>
+        <h2 class="story-skill-title" id="story-skill-title">The Visionary's Spark</h2>
+        <div class="story-divider"></div>
+        <div class="story-progress-indicator" id="story-q-indicator">Question 1 of 5</div>
+      </div>
+      <div class="story-body">
+        <div class="story-text" id="story-text"></div>
+        <div class="story-question" id="story-question"></div>
+        <div class="story-answers" id="story-answers"></div>
+        <div class="story-feedback hidden" id="story-feedback">
+          <div class="khan-label">— Feedback</div>
+          <p id="feedback-text"></p>
+        </div>
+        <div class="story-actions">
+          <button class="btn-primary hidden" id="btn-next" onclick="nextQuestion()">Next →</button>
+          <button class="btn-primary hidden" id="btn-complete" onclick="completeSkill()">Complete Skill ✓</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ AI TOOL MODAL ═══════════════════ -->
+  <div id="ai-modal" class="modal-overlay hidden">
+    <div class="ai-modal-box">
+      <div class="grain"></div>
+      <button class="story-close" onclick="closeAIModal()">✕</button>
+      <div id="ai-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ JOURNAL MODAL ═══════════════════ -->
+  <div id="journal-modal" class="modal-overlay hidden">
+    <div class="journal-modal-box">
+      <div class="grain"></div>
+      <button class="story-close" onclick="closeJournal()">✕</button>
+      <h2 class="modal-title">Your Journal</h2>
+      <p class="modal-sub">Your reflections, preserved.</p>
+      <div class="journal-entries" id="journal-entries"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONFIRM MODAL ═══════════════════ -->
+  <div id="confirm-modal" class="modal-overlay hidden">
+    <div class="modal-box small-modal">
+      <div class="grain"></div>
+      <h2 class="modal-title">Reset Everything?</h2>
+      <p class="modal-sub">This will delete ALL progress, venture data, and completed skills. This cannot be undone.</p>
+      <div class="confirm-btns">
+        <button class="btn-danger" onclick="executeReset()">Yes, Reset</button>
+        <button class="btn-secondary" onclick="closeConfirmModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
